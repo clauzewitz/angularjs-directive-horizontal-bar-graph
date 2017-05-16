@@ -65,7 +65,6 @@ angular.module('horizontalBarChart', []).directive('horizontalBarChart', functio
 					var bars = svg.selectAll('.bar').data(data).enter();
 					bars.append('rect')
 						.attr('class', 'bar2')
-						.attr('x', 0)
 						.attr('y', function (d) {
 							return y(d.name) + y.bandwidth() / 4;
 						})
@@ -83,7 +82,8 @@ angular.module('horizontalBarChart', []).directive('horizontalBarChart', functio
 						})
 						.attr('width', function (d, i, j) {
 							return Math.abs(x(d.value) - x(1));
-						});
+						})
+						.attr('x', 0);
 				}
 			});
 
