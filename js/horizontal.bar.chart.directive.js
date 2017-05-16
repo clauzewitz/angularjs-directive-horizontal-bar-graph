@@ -88,12 +88,11 @@ angular.module('horizontalBarChart', []).directive('horizontalBarChart', functio
 			});
 
 			function removeChart () {
-				svg.selectAll('g').remove();
 				svg.selectAll('rect')
 					.transition()
 					.duration(DURATION)
-					.attr('width', 0)
-					.remove();
+					.attr('width', 0);
+				svg.selectAll('*').remove();
 			}
 			
 			function calcMinMax (param) {
