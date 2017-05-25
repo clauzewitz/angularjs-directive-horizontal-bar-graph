@@ -7,7 +7,6 @@ angular.module('horizontalBarChart', []).directive('horizontalBarChart', functio
 				'data': '=',
 				'description': '=?',
 				'onClick': '&',
-				'accessor': '=',
 				'colors': '=?',
 				'colors2': '=?'
 			},
