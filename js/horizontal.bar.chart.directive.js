@@ -2,14 +2,14 @@ angular.module('horizontalBarChart', []).directive('horizontalBarChart', functio
 	try {
 		return {
 			scope: {
-				'width': '=',
-				'height': '=',
+				'width': '=?',
+				'height': '=?',
 				'data': '=',
-				'description': '=',
+				'description': '=?',
 				'onClick': '&',
 				'accessor': '=',
-				'colors': '=',
-				'colors2': '='
+				'colors': '=?',
+				'colors2': '=?'
 			},
 			restrict: 'E',
 			link: buildLink
